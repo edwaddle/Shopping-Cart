@@ -4,6 +4,7 @@
         <title>Shopping List</title>
         <meta charSet = "utf-8">
         <meta name="viewport" content ="width=device-width, initial-scale=1.0">
+        <script src="./script.js" type="text/javascript" defer></script>
         <style>
             li {
                 margin-bottom: 10px;
@@ -23,45 +24,11 @@
             <label for="item">Enter a new item:</label>
             <input type="text" name ="item" id="item">
             <button>Add item</button>
-            <p>someText</p>
         </div>
 
         <ul>
 
         </ul>
         
-        <script>
-            const ul = document.querySelector("ul");
-            const input = document.querySelector("input");
-            const btn = document.querySelector("button");
-            
-
-            function whenClicked(){
-                let userInput = input.value;
-                input.value = '';
-                console.log(userInput);
-
-                const li = document.createElement("li"); 
-                const span = document.createElement("span");
-                const button = document.createElement("button");
-                li.appendChild(span);
-                li.appendChild(button);
-                span.textContent = userInput;
-                button.textContent = "delete";
-                ul.append(li);
-
-                button.onclick = () => {
-                    li.remove();
-                    span.remove();
-                    button.remove();
-                }
-            }
-
-           
-            
-            
-            btn.onclick = () => whenClicked();
-               
-        </script>
     </body>
 </html>

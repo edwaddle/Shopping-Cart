@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Shopping List</title>
+        <meta charSet = "utf-8">
+        <meta name="viewport" content ="width=device-width, initial-scale=1.0">
+        <style>
+            li {
+                margin-bottom: 10px;
+            }
+
+            li button {
+                font-size: 12px;
+                margin-left: 20px;
+                color: #666;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>My shopping list</h1>
+
+        <div>
+            <label for="item">Enter a new item:</label>
+            <input type="text" name ="item" id="item">
+            <button>Add item</button>
+            <p>someText</p>
+        </div>
+
+        <ul>
+
+        </ul>
+        
+        <script>
+            const unorderedList = document.querySelector("ul");
+            const input = document.querySelector("input");
+            const btn = document.querySelector("button");
+
+            function whenClicked(){
+                console.log("I am clicked!");
+            }
+            
+            btn.onclick = () => whenClicked();
+               
+        </script>
+    </body>
+</html>
